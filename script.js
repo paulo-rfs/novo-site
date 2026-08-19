@@ -22,5 +22,4 @@ curtiu = true;
 texto.textContent--;
 curtiu = false;
 }
-}
-};
+}};

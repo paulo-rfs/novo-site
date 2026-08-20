@@ -1,21 +1,25 @@
-const botoes = document.querySelectorAll("button");
+const botao = document.querySelector("button");
+botao.addEventListener("click", botaoClicado);
 
-botoes.forEach(function(botao) {
+function botaoClicado() {
+let texto = botao.querySelector("span");
+texto.textContent++;
+}
 
-    let curtiu = false;
+botoes.forEach(function (botao) {
+let curtiu = false;
 
-    botao.addEventListener("click", function() {
+botao.addEventListener("click", botaoClicado);
 
-        const numero = botao.querySelector("span");
+function botaoClicado() {
+console.log("fui clicado");
+let texto = botao.querySelector("span");
 
-        if (curtiu === false) {
-            numero.textContent = 1;
-            curtiu = true;
-        } else {
-            numero.textContent = 0;
-            curtiu = false;
-        }
-
-    });
-
+if (curtiu === false) {
+texto.textContent++;
+curtiu = true;
+} else {
+texto.textContent--;
+curtiu = false;
+}
 });

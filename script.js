@@ -11,11 +11,15 @@ botoes.forEach(function (botao) {
         let texto = botao.querySelector("span");
 
         if (curtiu === false) {
+
             texto.textContent++;
             curtiu = true;
+
         } else {
+
             texto.textContent--;
             curtiu = false;
+
         }
 
     }
